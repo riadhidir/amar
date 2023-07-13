@@ -9,6 +9,7 @@ import {
 import Salles from './pages/Salles.jsx';
 import Home from './pages/Home.jsx';
 import Mainlayout from './layouts/Mainlayout';
+import Detailsalle from './pages/Detailsalle';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         path: '/salles',
         element: <Salles/>
       },
+      {
+        path: '/detailSalle/:salleId',
+        element : <Detailsalle/>
+      }
       //add new sub elements
     ]
   },
