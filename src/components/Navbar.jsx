@@ -55,6 +55,18 @@ const Navbar = () => {
                         <li>
                             <Link to="/ajouterSalle">Ajouter une Salle</Link>
                         </li>
+                        
+                       {
+                        isConnected || <>
+                        <li><Link className="btn bg-white border-0 capitalize" to="/connexion">
+                            se Connecter
+                        </Link></li>
+                        <li> <Link className="btn bg-white border-0 capitalize" to="/s'enregistrer">
+                            s'enregistrer
+                        </Link></li>
+                        </>
+                       }
+                        
                     </ul>
                 </div>
                 <Link
@@ -95,14 +107,15 @@ const Navbar = () => {
                         </button>
                     </>
                 ) : (
-                    <>
+                  
+                    <div className="hidden lg:flex gap-2">
                         <Link className="btn capitalize" to="/connexion">
                             se Connecter
                         </Link>
                         <Link className="btn capitalize" to="/s'enregistrer">
                             s'enregistrer
                         </Link>
-                    </>
+                    </div>
                 )}
             </div>
         </div>
