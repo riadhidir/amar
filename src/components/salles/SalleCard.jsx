@@ -1,7 +1,7 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 
-const SalleCard = ({title="fef", description="des", salleId="121", img}) => {
+const SalleCard = ({title, description, salleId, img}) => {
   return (
 <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img src={img} alt="Shoes" /></figure>
