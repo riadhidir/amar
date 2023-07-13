@@ -12,7 +12,7 @@ const Salles = () => {
                 const response = await axios.get('http://localhost:3000/api/salleValidee',{withCredentials:true});
                 setSalles(response.data)
             } catch (error) {
-                consolelog(error)
+                console.log(error)
             }
         }
         fetchSalle();
