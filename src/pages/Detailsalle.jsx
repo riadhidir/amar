@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 
 const Detailsalle = () => {
@@ -11,6 +11,7 @@ const Detailsalle = () => {
             try {
                 const response = await axios.get(`http://localhost:3000/api/salle/${salleId}`,{withCredentials:true});
                 setSalle(response.data)
+                console.log(response.data)
             } catch (error) {
                 console.log(error)
             }
